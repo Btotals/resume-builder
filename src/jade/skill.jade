@@ -1,0 +1,14 @@
+mixin skill(skills)
+  .section.skill-section.flex-align-column.justify-center
+    .skill-section-title 技术堆栈
+    .skill-section-description 前端设计，后端开发
+    .skill.flex-align-column.justify-space-around
+      each val in skills
+        +skillItemsBar(val)
+
+mixin skillItemsBar(item)
+  .item-bar.item-bar-master(style = "width: "+item.val)= item.name
+  .item-bar.item-bar-proficient(style = "width: "+item.val)= item.name
+  .item-bar.item-bar-qualified(style = "width: "+item.val)= item.name
+
+

@@ -1,0 +1,9 @@
+mixin profile(p)
+  .section.profile-section.flex-align-column.justify-center
+    .profile.text-center.justify-space-around
+      .avatar
+        img(src= p.src)
+      .self-info
+        .name= p.name
+        .intro= p.selfIntro
+        .desire= p.desire

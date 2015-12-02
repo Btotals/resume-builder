@@ -1,0 +1,44 @@
+@import 'common.sass'
+@import 'navigator.sass'
+@import 'profile.sass'
+@import 'skill.sass'
+
+.text-center
+  text-align: center
+
+.nav-bar
+  z-index: 100
+  position: fixed
+  left: 0
+  top: 40%
+  width: 5%
+  height: 20%
+
+.pages
+  overflow: hidden
+  height: 100%
+
+.section
+  position: absolute
+  height: 100%
+  width: 100%
+
+.page-before
+  height: 90%
+  width: 90%
+  margin: 5%
+  transform: translate3d(0, -111%, 0)
+  transition-property: margin, height, width, transform
+  transition-duration: 0.3s
+  transition-timing-function: initial
+  transition-delay: 0s, 0s, 0s, 0.3s
+
+.page-after
+
+.current
+  transform: translate3d(0, 0, 0)
+  transition-property: margin, height, width, transform
+  transition-duration: 0.3s
+  transition-timing-function: initial
+  transition-delay: 0.3s, 0.3s, 0.3s, 0s
+  // transition: all 0.5s

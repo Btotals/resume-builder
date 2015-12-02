@@ -1,0 +1,17 @@
+ul.navigator
+  height: 100%
+  .item
+    cursor: pointer
+    width: 10px
+    height: 10px
+    border: 1px solid #000
+    border-radius: 50%
+    list-style: none
+    transition: all 0.3s
+    &:hover
+      transform: scale(1.2)
+      transition: all 0.3s
+  .selected
+    background-color: #000
+    &:hover
+      transform: none
