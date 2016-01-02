@@ -24,7 +24,7 @@ window.onload = !->
       item.style.z-index = pages-num - index
 
   !function init-scroll then
-    options = last-scroll: 0, scroll-limit: 1000
+    options = last-scroll: 0, scroll-limit: 500
     navigate-to-scroll-index = (e)->
       e.prevent-default!
       now = new Date!

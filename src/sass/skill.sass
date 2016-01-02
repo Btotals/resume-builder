@@ -15,17 +15,17 @@
     width: 85%
 
     .item-bar
-      transition: all 0.5s
+      // transition: all 0.5s
       background-color: #FFF
       padding-left: 5px
       font-size: 1.5em
       height: 40px
       line-height: 40px
-      width: 100%
+      // transition: all 0.5s linear 1s
 
     .item-bar-master
       background-color: #EAF6D0
-      border-left: 3px solid #80bd01
+      border-left: 3px solid #80BD01
 
     .item-bar-proficient
       background-color: #D6EFFF
@@ -36,3 +36,27 @@
       border-left: 3px solid #FDBC40
 
     // .item-bar-practiced
+.current .skill
+  .item-bar
+    transition: all 0.5s linear 0.5s
+  .item-bar-60
+    width: 60%
+  .item-bar-65
+    width: 65%
+  .item-bar-70
+    width: 70%
+  .item-bar-75
+    width: 75%
+  .item-bar-80
+    width: 80%
+  .item-bar-85
+    width: 85%
+  .item-bar-90
+    width: 90%
+  .item-bar-95
+    width: 95%
+  .item-bar-100
+    width: 100%
+
+.item-bar
+  width: 0

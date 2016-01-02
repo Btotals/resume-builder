@@ -7,8 +7,8 @@ mixin skill(skills)
         +skillItemsBar(val)
 
 mixin skillItemsBar(item)
-  .item-bar.item-bar-master(style = "width: "+item.val)= item.name
-  .item-bar.item-bar-proficient(style = "width: "+item.val)= item.name
-  .item-bar.item-bar-qualified(style = "width: "+item.val)= item.name
+  .item-bar.item-bar-master(class = "item-bar-"+item.val)= item.name
+  .item-bar.item-bar-proficient(class = "item-bar-"+item.val)= item.name
+  .item-bar.item-bar-qualified(class = "item-bar-"+item.val)= item.name
 
 
