@@ -1,11 +1,11 @@
 include ./jade/profile.jade
 include ./jade/skill.jade
+include ./jade/education.jade
 include ./jade/navbar.jade
 
 html
   meta(charset="utf-8")
   link(rel="stylesheet", href="css/index.css")
-  script(src="http://localhost:35729/livereload.js")
   title Resume
 
   body
@@ -13,11 +13,12 @@ html
       //- +navbar([{lnk: "#profile", cnt: "profile"}, {lnk: "#experience", cnt: "experience"}])
       +navbar([1,2,3,4,5,6])
     .pages
-      //- +skill([{name: "JS", val: "95%"}, {name: "HTML&CSS", val: "90%"}, {name: "PHP", val: "80%"}, {name: "ASP.NET", val: "80%"}, {name: "J2E", val: "70%"}, {name: "Photoshop", val: "60%"}])
       +skill([{name: "PHP", val: "85%"}, {name: "ASP.NET", val: "70%"}])
-      each val in [1,2,3,4,5]
-        +profile({src: 'static/img/zerg.jpg', name: '隔壁老王'+val, selfIntro: 'Professional Passionate Programmer', desire: '前端攻城狮 软件攻城狮'})
+      +education([{src: "static/img/logo.gif", from: "2017.07", to: "", degree: "硕士", expTitle: "中山大学 信息科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}, {src: "static/img/logo.gif", from: "2013.07", to: "", degree: "学士", expTitle: "中山大学 数据科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}])
+      each val in [1,2,3,4]
+        +profile({src: 'static/img/Total copy.png', name: '隔壁老王'+val, selfIntro: 'Professional Passionate Programmer', desire: '前端攻城狮 软件攻城狮'})
 
+    script(src="http://localhost:35729/livereload.js")
     script(src='static/lib/jquery-2.1.4.min.js')
     script(src='static/lib/underscore-min.js')
     script(src='js/wheel.js')

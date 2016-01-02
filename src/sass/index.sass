@@ -2,6 +2,7 @@
 @import 'navigator.sass'
 @import 'profile.sass'
 @import 'skill.sass'
+@import 'education.sass'
 
 .text-center
   text-align: center
@@ -23,22 +24,54 @@
   height: 100%
   width: 100%
 
-.page-before
-  height: 90%
-  width: 90%
-  margin: 5%
-  transform: translate3d(0, -111%, 0)
-  transition-property: margin, height, width, transform
-  transition-duration: 0.3s
-  transition-timing-function: initial
-  transition-delay: 0s, 0s, 0s, 0.3s
+// .page-before-scale
+//   transform: scale(0.9)
+//   transition: all, 0.3s
 
-.page-after
+// .current
+//   transform: scale(1.0)
+//   transition: all, 0.3s
+
+// .page-before-translate
+//   width: 90%
+//   height: 90%
+//   margin: 5%
+//   transform: translate3d(0, -111%, 0)
+//   transition: all 0.3s
+
+// .page-before
+//   transform: translate3d(0, -111%, 0)
+
+// .page-after
+
+// .current-transition
+//   width: 90%
+//   height: 90%
+//   margin: 5%
+//   transform: translate3d(0, 0, 0)
+//   transition: all 0.3s
+
+.page-before
+  transform: translate3d(0, -100%, 0)
+  transition: all 0.5s
+  // animation: slide-up 1s linear
+  // animation-fill-mode: forwards
 
 .current
   transform: translate3d(0, 0, 0)
-  transition-property: margin, height, width, transform
-  transition-duration: 0.3s
-  transition-timing-function: initial
-  transition-delay: 0.3s, 0.3s, 0.3s, 0s
-  // transition: all 0.5s
+  transition: all 0.5s
+  // animation: slide-down 1s linear
+  // animation-fill-mode: forwards
+
+// @keyframes slide-up
+//   0%
+//     top: 0%
+//   100%
+//     top: -100%
+
+// @keyframes slide-down
+//   0%
+//     top: -100%
+//   100%
+//     top: 0%
+
