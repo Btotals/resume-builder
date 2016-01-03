@@ -5,6 +5,7 @@ include ./jade/navbar.jade
 
 html
   meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
   link(rel="stylesheet", href="css/index.css")
   title Resume
 
@@ -13,10 +14,10 @@ html
       //- +navbar([{lnk: "#profile", cnt: "profile"}, {lnk: "#experience", cnt: "experience"}])
       +navbar([1,2,3,4,5,6])
     .pages
-      +education([{src: "static/img/logo.gif", from: "2017.07", to: "", degree: "硕士", expTitle: "中山大学 信息科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}, {src: "static/img/logo.gif", from: "2013.07", to: "", degree: "学士", expTitle: "中山大学 数据科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}])
-      +skill([{name: "PHP", val: "85"}, {name: "ASP.NET", val: "70"}])
-      each val in [1,2,3,4]
-        +profile({src: 'static/img/Total copy.png', name: '隔壁老王'+val, selfIntro: 'Professional Passionate Programmer', desire: '前端攻城狮 软件攻城狮'})
+      //- +skill([{name: "HTML(5)&CSS(3)", val: "95", level: "master"}, {name: "JavaScript", val: "95", level: "master"}, {name: "Meteor.js", val: "90", level: "master"}, {name: "Node.js", val: "80", level: "proficient"}, {name: "Python", val: "70", level: "proficient"}, {name: "Photoshop", val: "60", level: "qualified"}])
+      +education([{src: "static/img/logo.gif", from: "2017.07", to: "2019.06", degree: "硕士", expTitle: "中山大学 信息科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}, {src: "static/img/logo.gif", from: "2013.07", to: "", degree: "学士", expTitle: "中山大学 数据科学与计算机学院", exp: ["曾获……", "曾担任……", "曾参与……"]}])
+      //- each val in [1,2,3,4]
+      //-   +profile({src: 'static/img/Total copy.png', name: '隔壁老王'+val, selfIntro: 'Professional Passionate Programmer', desire: '前端攻城狮 软件攻城狮'})
 
     script(src="http://localhost:35729/livereload.js")
     script(src='static/lib/jquery-2.1.4.min.js')

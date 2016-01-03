@@ -1,14 +1,9 @@
+- var prefix = " item-bar-"
+
 mixin skill(skills)
   .section.skill-section.flex-align-column.justify-center
     .skill-section-title 技术堆栈
-    .skill-section-description 前端设计，后端开发
+    .skill-section-description 熟悉前端布局设计，掌握明了后端开发
     .skill.flex-align-column.justify-space-around
-      each val in skills
-        +skillItemsBar(val)
-
-mixin skillItemsBar(item)
-  .item-bar.item-bar-master(class = "item-bar-"+item.val)= item.name
-  .item-bar.item-bar-proficient(class = "item-bar-"+item.val)= item.name
-  .item-bar.item-bar-qualified(class = "item-bar-"+item.val)= item.name
-
-
+      each item in skills
+        .item-bar(class=prefix+item.level+prefix+item.val)= item.name
