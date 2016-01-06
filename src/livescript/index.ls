@@ -20,15 +20,17 @@ window.onload = !->
 
   !function reset-pages then
     _.for-each pages, (item, index)!->
-      $ item .css 'z-index': pages-num - index
       item.style.z-index = pages-num - index
 
   !function init-scroll then
+
     options = last-scroll: 0, scroll-limit: 500
+
     navigate-to-scroll-index = (e)->
       e.prevent-default!
       now = new Date!
       if now - options.last-scroll < options.scroll-limit then return false
+
       current = document.get-elements-by-class-name 'current' .0
       page-index = _.index-of current.parent-element.children, current
       current-scroll = e.original-event.wheel-delta
@@ -38,6 +40,7 @@ window.onload = !->
         page-index > 0 and navigate-to-index page-index - 1
       options.last-scroll = now
       return false
+
     $ window .bind 'mousewheel', navigate-to-scroll-index
 
 
@@ -75,6 +78,7 @@ window.onload = !->
       'OTransition': 'otransitionend'
       'MozTransition': 'transitionend'
       'WebkitTransition': 'webkitTransitionEnd'
+
     for t of transitions
       if transitions.has-own-property t and e.style[t] isnt undefined
         return transitions[t]

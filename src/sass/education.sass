@@ -1,11 +1,14 @@
 .pages .edu-section
   background-color: #eaeaea
-  font-family: "Courier New", Courier, monospace
   .education-title
     padding: 3%
     width: 80%
     text-align: center
     font-size: 2em
+  .education-sub-title
+    font-size: 1.2em
+    text-align: center
+    color: #aaa
   .education-detail
     align-self: center
     align-items: flex-start
@@ -51,24 +54,24 @@
 
     .education-item
       width: 100%
-      margin-left: 10%
+      margin-right: 5%
       flex-wrap: wrap
-      .education-experience-title
+      .education-university-name
         font-size: 2em
-        margin-left: 6%
-        width: 90%
-
+        width: 100%
+      .education-experience-major
+        width: 100%
+        color: #aaa
       .education-university-logo img
         width: 100px
         height: 100px
-        // flex-grow: 1
       .education-experience
-        // flex-grow: 1
         width: 70%
         justify-content: space-around
         align-items: flex-start
         margin-left: 6%
         font-size: 1.2em
+        word-break: break-all
 
 // .current .education-detail .education-university-timeline-item
 //   right: 0
@@ -90,18 +93,20 @@
           img
             width: 50px
             height: 50px
-        .education-experience-title
+        .education-experience-degree
+          width: 70%
+        .education-university-name
           order: 2
           font-size: 18px
           line-height: 50px
           margin-left: 0
-          width: 300px
+          width: 30%
         .education-experience
           margin-left: 10%
           order: 3
           font-size: 12px
           width: 90%
-          word-break: break-all
+
 
 @media only screen and (max-width: 480px)
   .pages .edu-section

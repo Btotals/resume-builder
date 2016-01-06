@@ -1,18 +1,18 @@
-- var prev = ""
 mixin education(edu)
   .section.edu-section.flex-align-column
     .education-title 教育经历
-    //- .education-sub-title 教育经历
+    .education-sub-title 4年本科，3年硕士，学生时代一直热爱web开发
     .education-detail.flex-align-column
       each e in edu
         if e.to
           .education-university-timeline-item
             .education-university-time= e.to
         .education-item.flex-align-row
-          .education-experience-title= e.expTitle
+          .education-university-name= e.Uname
+          .education-experience-major= e.major
           .education-university-logo.flex-align-column
             img(src=e.src)
-            // .education-university-degree= e.degree
+            //- .education-university-degree= e.degree
           ul.education-experience.flex-align-column
             each experience in e.exp
               li.education-exp-item= experience+"xxxxxxxxxxxzxxxxxxxxxxxxxxxxxxxxxxxxxxzxxxxxxxxxxxxxxx……"
