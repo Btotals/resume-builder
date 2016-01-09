@@ -10,8 +10,14 @@ mixin project(pro)
             each t in p.tags
               li.project-item-tag(class= t+'-tag')= t
               //- li.project-item-tag= t
-          .project-item-time= p.time
-          .project-item-summary
-            !{p.summary}
           .project-item-preview
             img(src= p.preview)
+          .project-item-summary
+            !{p.summary}
+          if p.lnk || p.src
+            .project-item-link-area
+              if p.lnk
+                a(href= p.lnk) 项目网站
+              if p.src
+                a(href= p.src) 项目代码
+          .project-item-time= p.time

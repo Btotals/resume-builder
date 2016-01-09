@@ -11,10 +11,8 @@
 .nav-bar
   z-index: 100
   position: fixed
-  left: 0
+  left: 5px
   top: 40%
-  width: 5%
-  height: 20%
 
 .pages
   overflow: hidden
@@ -28,7 +26,9 @@
 .page-before
   transform: translate3d(0, -100%, 0)
   transition: all 0.5s
+  opacity: 0
 
 .current
   transform: translate3d(0, 0, 0)
   transition: all 0.5s
+  opacity: 1

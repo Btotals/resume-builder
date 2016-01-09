@@ -20,20 +20,23 @@
       border-bottom: 4px dashed #ccc
       margin-bottom: -4px
       position: relative
+
+      justify-content: space-between
+
       .project-item-title
         font-weight: 600
         font-size: 1.5em
-        width: 100%
+        width: 58%
         margin: 1% 0
       .project-item-time
-        padding-right: 1%
-        width: 29%
+        width: 100%
         text-align: right
         color: #aaa
 
       .project-item-tags
-        width: 70%
+        align-items: center
         .project-item-tag
+          height: 14px
           border-radius: 3px
           background-color: #F0DB4F
           color: #000
@@ -42,23 +45,45 @@
           vertical-align: middle
           list-style-type: none
           margin-right: 5px
-        .LiveScript-tag
+        .JavaScript-tag, .LiveScript-tag
           background-color: #80bd01
           color: #fff
-        .Jade-tag
+        .HTML-tag, .Jade-tag
           background-color: #FF6600
           color: #fff
-        .Sass-tag
+        .CSS-tag, .Sass-tag
           background-color: #FF9900
+          color: #fff
+        .Ajax-tag
+          background-color: #3498DB
           color: #fff
 
       .project-item-preview
         width: 25%
         img
           width: 100%
+      .project-item-link-area
+        width: 100%
+        text-align: right
+        a
+          margin-left: 15px
       .project-item-summary
-        word-break: break-all
+        text-indent: 2em
+        word-break: normal
         width: 70%
         // margin-right: 5%
-        padding: 2%
+        padding-left: 4%
+        li
+          margin-left: 2em
+          text-indent: 0
+
+@media only screen and (max-width: 640px)
+  .project-item
+    .project-item-tags
+      width: 100%
+      margin-bottom: 1%
+    .project-item-preview
+      width: 100% !important
+    .project-item-summary
+      width: 100% !important
 
