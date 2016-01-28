@@ -1,0 +1,36 @@
+@import 'mixin.sass'
+.pages .contact-section
+  background-color: #eee
+  .contact-title
+    padding: 3%
+    width: 80%
+    text-align: center
+    font-size: 2em
+  .contact-sub-title
+    font-size: 1.2em
+    text-align: center
+    color: #aaa
+  .contact-body-container
+    margin-top: 50px
+    @include flex-row
+    .contact-qrcode-container img
+      height: 200px
+      margin-right: 50px
+    .contact-list
+      list-style: none
+      @include flex-col
+      .contact-list-item-container
+        @include flex-row
+        i
+          width: 50px
+        .contact-phone-value,
+        .contact-weixin-value,
+        .contact-qq-value,
+        .contact-email-value,
+        .contact-github-value,
+        .contact-blog-value
+          text-align: middle
+          color: black
+          font-size: 30px
+          &:hover
+            color: #08C

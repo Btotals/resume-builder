@@ -4,20 +4,24 @@ mixin project(pro)
     .project-sub-title X年前端开发，丰富的工作经验
     .project-detail.flex-align-column
       each p in pro
-        .project-item.flex-align-row
-          .project-item-title= p.title
-          ul.project-item-tags.flex-align-row
-            each t in p.tags
-              li.project-item-tag(class= t+'-tag')= t
-              //- li.project-item-tag= t
-          .project-item-preview
-            img(src= p.preview)
-          .project-item-summary
-            !{p.summary}
-          if p.lnk || p.src
-            .project-item-link-area
-              if p.lnk
-                a(href= p.lnk) 项目网站
-              if p.src
-                a(href= p.src) 项目代码
-          .project-item-time= p.time
+        .project-item.project-item-responsive
+          .project-item-top.project-item-top-responsive
+            .project-item-title= p.title
+            ul.project-item-tags.flex-align-row
+              each t in p.tags
+                li.project-item-tag(class= t+'-tag')= t
+                //- li.project-item-tag= t
+          .project-item-body.project-item-body-responsive     
+            .project-item-preview
+              img(src= p.preview)
+            .project-item-context.project-item-context-responsive
+              .project-item-summary
+                !{p.summary}
+              .project-item-context-bottom
+                if p.lnk || p.src
+                  .project-item-link-area
+                    if p.lnk
+                      a(href= p.lnk) 项目网站
+                    if p.src
+                      a(href= p.src) 项目代码
+                .project-item-time= p.time
