@@ -1,5 +1,5 @@
 .pages .pro-section
-  background-color: #FFEFEF
+  background-color: #FFFEF0
   .project-title
     padding: 3%
     width: 80%
@@ -13,6 +13,7 @@
     width: 80%
     align-items: flex-start
     border-bottom: 4px solid #ccc
+    margin-bottom: 10px
     .project-item
       width: 96%
       padding: 2%
@@ -20,7 +21,6 @@
       border-bottom: 4px dashed #ccc
       margin-bottom: -4px
       position: relative
-
       justify-content: space-between
 
       .project-item-title
@@ -28,13 +28,11 @@
         font-size: 1.5em
         width: 58%
         margin: 1% 0
-      .project-item-time
-        width: 100%
-        text-align: right
-        color: #aaa
 
       .project-item-tags
         align-items: center
+        justify-content: flex-end
+        width: 42%
         .project-item-tag
           height: 14px
           border-radius: 3px
@@ -63,27 +61,50 @@
         img
           width: 100%
       .project-item-link-area
+        position: absolute
+        bottom: 40px
+        right: 2%
+        height: 20px
         width: 100%
         text-align: right
         a
           margin-left: 15px
+      .project-item-time
+        position: absolute
+        bottom: 20px
+        right: 2%
+        height: 20px
+        width: 100%
+        text-align: right
+        color: #aaa
+
+
       .project-item-summary
         text-indent: 2em
         word-break: normal
         width: 70%
-        // margin-right: 5%
         padding-left: 4%
         li
           margin-left: 2em
           text-indent: 0
 
 @media only screen and (max-width: 640px)
-  .project-item
-    .project-item-tags
-      width: 100%
-      margin-bottom: 1%
-    .project-item-preview
-      width: 100% !important
-    .project-item-summary
-      width: 100% !important
+  .pages .pro-section
+    height: auto
+    .project-detail .project-item
+      .project-item-title
+        margin: 0
+      .project-item-tags
+        width: 100%
+        justify-content: flex-start
+        margin-bottom: 1%
+      .project-item-preview
+        width: 100%
+      .project-item-summary
+        width: 100%
+        margin-top: 5px
+      .project-item-link-area
+        position: static
+      .project-item-time
+        position: static
 

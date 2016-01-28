@@ -8,15 +8,35 @@ window.onload = !->
   !function resume-init then
     init-navbar!
     init-pages!
-    init-scroll!
+    # init-scroll!
 
 
   !function init-navbar then
+    nav-items.0.class-name += ' selected'
     _.for-each nav-items, (i)!-> i.onclick = navigate-to-click-index
 
   !function init-pages then
     document.get-elements-by-class-name 'section' .0 .class-name += ' current'
+    init-skill-page!
     reset-pages!
+
+  # TODO: using event lib to handle cb-list
+  !function init-skill-page then
+    skill-item-bar = document.get-elements-by-class-name 'item-bar'
+    active-info = []
+    _.for-each skill-item-bar, (item)!->
+      item.onclick = (e)!->
+        e.stop-propagation!
+        info = @children.0
+        if info and 0 > info.class-name.index-of 'display' then
+          info.class-name += ' item-bar-info-display'
+          active-info.push info
+    skill-page = document.get-elements-by-class-name 'skill-section' .0
+      ..onclick = (e)!->
+        _.for-each active-info, (item)!->
+          item.class-name = item.class-name.replace 'item-bar-info-display', ''
+        # _.for-each skill-item-bar, (item)!->
+        #   item.children.0?class-name.replace 'item-bar-info-display', ''
 
   !function reset-pages then
     _.for-each pages, (item, index)!->
