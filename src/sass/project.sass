@@ -1,3 +1,4 @@
+@import 'mixin.sass'
 .pages .pro-section
   background-color: #FFFEF0
   .project-title
@@ -31,7 +32,6 @@
 
       .project-item-tags
         align-items: center
-        justify-content: flex-end
         width: 42%
         .project-item-tag
           height: 14px
@@ -56,23 +56,23 @@
           background-color: #3498DB
           color: #fff
 
-      .project-item-preview
-        width: 25%
-        img
-          width: 100%
+      // .project-item-preview
+        // width: 25%
+        // img
+        //   width: 100%
       .project-item-link-area
-        position: absolute
-        bottom: 40px
-        right: 2%
+        // position: absolute
+        // bottom: 40px
+        // right: 2%
         height: 20px
         width: 100%
         text-align: right
         a
           margin-left: 15px
       .project-item-time
-        position: absolute
-        bottom: 20px
-        right: 2%
+        // position: absolute
+        // bottom: 20px
+        // right: 2%
         height: 20px
         width: 100%
         text-align: right
@@ -82,29 +82,66 @@
       .project-item-summary
         text-indent: 2em
         word-break: normal
-        width: 70%
+        // width: 70%
         padding-left: 4%
         li
           margin-left: 2em
           text-indent: 0
+@media only screen and (min-width: 1024px)
+  .project-item-summary
+    line-height: 1.7
 
-@media only screen and (max-width: 640px)
-  .pages .pro-section
-    height: auto
-    .project-detail .project-item
-      .project-item-title
-        margin: 0
+@media only screen and (min-width: 720px)        
+  .project-item-responsive
+    .project-item-top-responsive
+      @include flex-row
       .project-item-tags
-        width: 100%
-        justify-content: flex-start
-        margin-bottom: 1%
+        justify-content: flex-end
+    .project-item-body-responsive
+      @include flex-row
       .project-item-preview
-        width: 100%
-      .project-item-summary
-        width: 100%
-        margin-top: 5px
-      .project-item-link-area
-        position: static
-      .project-item-time
-        position: static
+        flex: 1 1 35%
+        img
+          width: 100%
+      .project-item-context-responsive
+        justify-content: space-between
+        flex: 1 1 65%
+        @include flex-col
+
+
+
+@media only screen and (max-width: 720px)
+  .project-item-responsive
+    .project-item-top-responsive
+      margin-bottom: 5px
+      @include flex-col
+      .project-item-tags
+        align-self: flex-start
+    .project-item-body-responsive
+      @include flex-col
+      .project-item-preview
+        margin-bottom: 5px
+        img
+          width: 100%
+      .project-item-context-responsive
+        @include flex-col
+
+  // .pages .pro-section
+  //   height: auto
+  //   .project-detail .project-item
+  //     .project-item-title
+  //       margin: 0
+  //     .project-item-tags
+  //       width: 100%
+  //       justify-content: flex-start
+  //       margin-bottom: 1%
+  //     .project-item-preview
+  //       width: 100%
+  //     .project-item-summary
+  //       width: 100%
+  //       margin-top: 5px
+  //     .project-item-link-area
+  //       position: static
+  //     .project-item-time
+  //       position: static
 

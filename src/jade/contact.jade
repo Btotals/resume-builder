@@ -1,0 +1,33 @@
+mixin contact(contact)
+  .section.contact-section.flex-align-column
+    .contact-title 联系方式
+    .contact-sub-title 招我到碗里吧
+    .contact-body-container
+      .contact-qrcode-container
+        img(src="static/img/wechat.jpg", class="qrcode")
+      .contact-list-container
+        ul.contact-list
+          li.contact-phone
+            .contact-list-item-container
+              i(class="fa fa-phone-square fa-2x")
+              span.contact-phone-value= contact.phone
+          li.contact-weixin
+            .contact-list-item-container
+              i(class="fa fa-weixin fa-2x")
+              span.contact-weixin-value= contact.weixin
+          li.contact-qq
+            .contact-list-item-container
+              i(class="fa fa-qq fa-2x")
+              span.contact-qq-value= contact.qq
+          li.contact-email
+            .contact-list-item-container
+              i(class="fa fa-envelope fa-2x")
+              a(href=("mailto://"+contact.email), class="contact-email-value")= contact.email
+          li.contact-github
+            .contact-list-item-container
+              i(class="fa fa-github-square fa-2x")
+              a(href=contact.github, class="contact-github-value")= contact.github 
+          li.contact-blog
+            .contact-list-item-container
+              i(class="fa fa-rss-square fa-2x")
+              a(href=contact.blog, class="contact-blog-value")= contact.blog 

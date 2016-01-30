@@ -8,7 +8,7 @@ window.onload = !->
   !function resume-init then
     init-navbar!
     init-pages!
-    # init-scroll!
+    init-scroll!
 
 
   !function init-navbar then
